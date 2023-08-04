@@ -1,17 +1,24 @@
 import './globals.css'
-import { Inter } from 'next/font/google'
+import { Montserrat } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const montserrat = Montserrat({
+  weight: ['500', '700'],
+  style: ['normal'],
+  subsets: ['latin'],
+  variable: '--font-montserrat'
+})
 
 export const metadata = {
-  title: 'JP',
-  description: 'Marca personal sobre JP',
-}
+    title: 'JP',
+    description: 'Marca personal sobre JP',
+  }
 
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={`${montserrat.variable}`}>
+        {children}
+      </body>
     </html>
   )
 }
