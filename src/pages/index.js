@@ -1,12 +1,12 @@
 import 'tailwindcss/tailwind.css';
 
 import Head from 'next/head';
-import HeroSection from '../components/index/HeroSection';
-import SkillsSection from '../components/index/SkillsSection';
-import CoursesSection from '../components/index/CoursesSection';
+import MainSection from '../components/index/MainSection';
 import AboutMeSection from '../components/index/AboutMeSection';
-import TestimonialsSection from '../components/index/TestimonialsSection';
-import ContactSection from '../components/index/ContactsSection';
+// import SkillsSection from '../components/index/SkillsSection';
+// import CoursesSection from '../components/index/CoursesSection';
+// import TestimonialsSection from '../components/index/TestimonialsSection';
+// import ContactSection from '../components/index/ContactsSection';
 import Footer from '../components/index/Footer';
 
 const Home = () => {
@@ -14,15 +14,15 @@ const Home = () => {
     <div>
       <Head>
         <title>JP</title>
-        <meta name="description" content="Marca personal sobre JP" />
+        <meta name="description" content="Marca personal" />
       </Head>
 
-      <HeroSection />
-      <SkillsSection />
-      <CoursesSection />
+      <MainSection />
       <AboutMeSection />
+      {/* <SkillsSection />
+      <CoursesSection />
       <TestimonialsSection />
-      <ContactSection />
+      <ContactSection /> */}
       <Footer />
     </div>
   );
