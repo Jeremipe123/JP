@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css';
 import Head from 'next/head';
 import MainSection from '../components/index/MainSection';
 import AboutMeSection from '../components/index/AboutMeSection';
-// import SkillsSection from '../components/index/SkillsSection';
+import SkillsSection from '../components/index/SkillsSection';
 // import CoursesSection from '../components/index/CoursesSection';
 // import TestimonialsSection from '../components/index/TestimonialsSection';
 // import ContactSection from '../components/index/ContactsSection';
@@ -13,14 +13,15 @@ const Home = () => {
   return (
     <div>
       <Head>
-        <title>JP</title>
+      <link rel="icon" href="/assets/img/logo.png" />
+        <title>JEREMI PEREZ</title>
         <meta name="description" content="Marca personal" />
       </Head>
 
       <MainSection />
       <AboutMeSection />
-      {/* <SkillsSection />
-      <CoursesSection />
+      {/* <SkillsSection /> */}
+      {/* <CoursesSection />
       <TestimonialsSection />
       <ContactSection /> */}
       <Footer />
