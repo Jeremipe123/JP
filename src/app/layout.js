@@ -9,15 +9,15 @@ const montserrat = Montserrat({
 })
 
 export const metadata = {
-    title: 'JP',
-    description: 'Marca personal sobre JP',
-  }
+  title: 'JP',
+  description: 'Marca personal sobre JP'
+}
 
-export default function RootLayout({ children }) {
+export default function RootLayout ({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.variable}`}>
-        {children}
+      <body className={ `${montserrat.variable}` }>
+        { children }
       </body>
     </html>
   )

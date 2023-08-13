@@ -1,25 +1,14 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities;
-*/
-
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #09ff00;
+  /* ... otros colores ... */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  /* color: var(--primary-color); */
+  background: var(--background-color);
 }
+
+/* Otras reglas CSS que utilizan las variables */

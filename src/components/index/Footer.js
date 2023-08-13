@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
-import React from 'react';
-import { FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa';
+import React from 'react'
+import { FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa'
 
 const Footer = () => {
   return (
@@ -12,7 +11,7 @@ const Footer = () => {
               <img src="/assets/img/logo.png" alt="JP Logo" className="w-12 h-12 mr-2" />
             </div>
           </div>
-          <div className="flex justify-center">
+          <div className="flex justify-center ml-6">
             <a href="https://wa.me/+584241939329" className="mr-4">
               <FaWhatsapp size={24} className="text-white hover:text-gray-300" />
             </a>
@@ -29,7 +28,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

@@ -1,6 +1,5 @@
-/* eslint-disable @next/next/no-img-element */
+import React from 'react'
 import '../../../public/assets/css/styles.css'
-import React from 'react';
 
 const MainSection = () => {
   return (
@@ -15,7 +14,7 @@ const MainSection = () => {
         <img src="/assets/img/background.png" alt="Banner de la marca personal" className="w-full h-full object-cover" />
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default MainSection;
+export default MainSection
