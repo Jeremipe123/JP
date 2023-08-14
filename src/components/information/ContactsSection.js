@@ -5,7 +5,7 @@ const ContactSection = () => {
     <div className="bg-grays-500 py-8">
       <div className="container mx-auto px-4 md:px-8">
         <h2 className="text-2xl text-primarys-900 font-semibold mb-4">Forma parte de nuestra comunidad</h2>
-        <p className="text-primarys-900 mb-14">Únete a nosotros para participar en nuestra comunidad. ¡Te damos la bienvenida!</p>
+        <p className="text-primarys-900 mb-14 ">Únete a nosotros para participar en nuestra comunidad. ¡Te damos la bienvenida!</p>
         <form className="mx-auto flex flex-col md:flex-row md:items-center">
           <div className="w-full md:w-1/6 mb-4 md:mb-0 md:mr-4">
             <label className="block uppercase tracking-wide text-primarys-900 text-xs font-bold mb-2">
