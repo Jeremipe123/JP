@@ -1,5 +1,5 @@
-import React from 'react'
 import { FaWhatsapp, FaInstagram, FaYoutube } from 'react-icons/fa'
+import React from 'react'
 
 const Footer = () => {
   return (
@@ -13,13 +13,13 @@ const Footer = () => {
           </div>
           <div className="flex justify-center ml-6">
             <a href="https://wa.me/+584241939329" className="mr-4">
-              <FaWhatsapp size={24} className="text-white hover:text-gray-300" />
+              <FaWhatsapp size={ 24 } className="text-white hover:text-gray-300" />
             </a>
-            <a href="https://www.youtube.com/@jeremi4645" className="mr-4">
-              <FaYoutube size={24} className="text-white hover:text-gray-300" />
+            <a href="https://www.youtube.com/@JeremiPerez19" className="mr-4">
+              <FaYoutube size={ 24 } className="text-white hover:text-gray-300" />
             </a>
             <a href="https://www.instagram.com/jeremiperez19">
-              <FaInstagram size={24} className="text-white hover:text-gray-300" />
+              <FaInstagram size={ 24 } className="text-white hover:text-gray-300" />
             </a>
           </div>
           <div className="text-center md:text-right">
