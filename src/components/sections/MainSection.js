@@ -1,5 +1,5 @@
 import React from 'react'
-import '../../../public/assets/css/styles.css'
+import '../../app/globals.css'
 
 const MainSection = () => {
   return (

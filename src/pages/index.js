@@ -1,31 +1,27 @@
 import 'tailwindcss/tailwind.css'
-import Head from 'next/head'
-import MainSection from '../components/information/MainSection'
-import AboutMeSection from '../components/information/AboutMeSection'
-import ContactSection from '../components/information/ContactsSection'
-// import SkillsSection from '../components/index/SkillsSection';
-// import CoursesSection from '../components/index/CoursesSection';
-// import TestimonialsSection from '../components/index/TestimonialsSection';
-import Footer from '../components/index/Footer'
+/* ******************************************************** */
+import HeadPage from '@/components/common/Head'
+import Footer from '@/components/common/Footer'
+/* ******************************************************** */
+import MainSection from '@/components/sections/MainSection'
+import AboutMe from '@/components/sections/AboutMeSection'
+import ContactsSection from '@/components/sections/ContactsSection'
+import ProjectSesion from '@/components/sections/ProjectSection'
+/* ******************************************************** */
 
-const Home = () => {
+const Main = () => {
   return (
     <div>
-      <Head>
-        <link rel="icon" href="/assets/img/logo.png" />
-        <title>JEREMI PEREZ</title>
-        <meta name="description" content="Marca personal" />
-      </Head>
+      <HeadPage />
 
       <MainSection />
-      <AboutMeSection />
-      <ContactSection />
-      {/* <SkillsSection /> */ }
-      {/* <CoursesSection />
-      <TestimonialsSection /> */}
+      <AboutMe />
+      <ContactsSection />
+      <ProjectSesion />
+
       <Footer />
     </div>
   )
 }
 
-export default Home
+export default Main

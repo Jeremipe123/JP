@@ -1,14 +1,30 @@
 :root {
-  --primary-color: #007bff;
+  /* --primary-color: #007bff; */
   --secondary-color: #6c757d;
-  --background-color: #09ff00;
+  /* --background-color: #09ff00; */
   /* ... otros colores ... */
 }
 
-
-body {
-  /* color: var(--primary-color); */
-  background: var(--background-color);
+/*   CSS para la animación   */
+.animate-fade-in {
+  animation: fade-in 1s ease-out;
 }
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* body { */
+/* color: var(--primary-color); */
+/* background: var(--background-color); */
+/* } */
 
 /* Otras reglas CSS que utilizan las variables */
