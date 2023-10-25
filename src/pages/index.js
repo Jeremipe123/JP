@@ -1,3 +1,4 @@
+/* ******************************************************** */
 import 'tailwindcss/tailwind.css'
 /* ******************************************************** */
 import HeadPage from '@/components/common/Head'
