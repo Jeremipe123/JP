@@ -1,33 +1,76 @@
-import React from 'react'
-// import Slider from 'react-slick'
-// import 'slick-carousel/slick/slick.css'
-// import 'slick-carousel/slick/slick-theme.css'
+import React, { useState } from 'react'
+import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
+import { RxDotFilled } from 'react-icons/rx'
+// import Home from '@/components/ui/Carrousel'
 
-// const settings = {
-//   dots: true,
-//   infinite: true,
-//   speed: 500,
-//   slidesToShow: 1,
-//   slidesToScroll: 1
-// }
+const ProjectSection = () => {
+  const slides = [
+    {
+      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80'
+    },
 
-const ProjectSesion = () => {
+    {
+      url: '/assets/img/images/1.jpg'
+    },
+    {
+      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80'
+    }
+  ]
+
+  const [currentIndex, setCurrentIndex] = useState(0)
+
+  const prevSlide = () => {
+    const isFirstSlide = currentIndex === 0
+    const newIndex = isFirstSlide ? slides.length - 1 : currentIndex - 1
+    setCurrentIndex(newIndex)
+  }
+
+  const nextSlide = () => {
+    const isLastSlide = currentIndex === slides.length - 1
+    const newIndex = isLastSlide ? 0 : currentIndex + 1
+    setCurrentIndex(newIndex)
+  }
+
+  const goToSlide = (slideIndex) => {
+    setCurrentIndex(slideIndex)
+  }
+
   return (
-    <div className="bg-primary-300 py-4">
-      <div className="text-center mb-20">
-        <h2 className="text-4xl">Proyectos</h2>
-      </div>
-      <div className="max-w-sm mx-auto mb-14">
-        <p className="text-xl text-center">&quot;Sobre que es el proyecto, y cuales son sus valores o cosas que lo identifiquen&quot;</p>
-      </div>
-      <div className="max-w-xl mx-auto">
-        <p className="text-xl text-center">Nombre del proyecto</p>
-      </div>
-      <div className="text-center">
-        <a className="text-xl underline">Ver Más</a>
+    <div className="bg-primary-800 w-full h-96">
+      <div className='max-w-[1400px] h-[780px] w-full m-auto relative group'>
+        <div
+          style={ { backgroundImage: `url(${slides[currentIndex].url})` } }
+          className='w-full h-full bg-center bg-cover duration-500'
+        >
+          {/* Left Arrow */ }
+          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl p-2 text-white cursor-pointer'>
+            <BsChevronCompactLeft onClick={ prevSlide } size={ 30 } />
+          </div>
+          {/* Right Arrow */ }
+          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl p-2 text-white cursor-pointer'>
+            <BsChevronCompactRight onClick={ nextSlide } size={ 30 } />
+          </div>
+          <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+            { slides.map((slide, slideIndex) => (
+              <div
+                key={ slideIndex }
+                onClick={ () => goToSlide(slideIndex) }
+                className='text-2xl cursor-pointer'
+              >
+                <RxDotFilled />
+              </div>
+            )) }
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default ProjectSesion
+export default ProjectSection
