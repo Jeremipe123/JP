@@ -1,25 +1,23 @@
 import React, { useState } from 'react'
-import { BsChevronCompactLeft, BsChevronCompactRight } from 'react-icons/bs'
+import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { RxDotFilled } from 'react-icons/rx'
+import 'src/app/globals.css'
 // import Home from '@/components/ui/Carrousel'
 
 const ProjectSection = () => {
   const slides = [
     {
-      url: 'https://images.unsplash.com/photo-1531297484001-80022131f5a1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2620&q=80'
+      url: '/assets/img/projects/1.png'
     },
     {
-      url: 'https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2670&q=80'
+      url: '/assets/img/projects/2.png'
     },
     {
-      url: 'https://images.unsplash.com/photo-1661961112951-f2bfd1f253ce?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2672&q=80'
+      url: '/assets/img/projects/3.png'
     },
 
     {
       url: '/assets/img/images/1.jpg'
-    },
-    {
-      url: 'https://images.unsplash.com/photo-1496181133206-80ce9b88a853?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80'
     }
   ]
 
@@ -42,26 +40,26 @@ const ProjectSection = () => {
   }
 
   return (
-    <div className="bg-primary-800 w-full h-96">
-      <div className='max-w-[1400px] h-[780px] w-full m-auto relative group'>
+    <div className="bg-primary-800 w-full h-full">
+      <div className='max-w-[1400px] h-[599px] w-full m-auto relative group'>
         <div
           style={ { backgroundImage: `url(${slides[currentIndex].url})` } }
-          className='w-full h-full bg-center bg-cover duration-500'
+          className='w-full h-full bg-center bg-no-repeat object-fill ease-in-out duration-300'
         >
           {/* Left Arrow */ }
-          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl p-2 text-white cursor-pointer'>
-            <BsChevronCompactLeft onClick={ prevSlide } size={ 30 } />
+          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl cursor-pointer'>
+            <IoIosArrowBack onClick={ prevSlide } size={ 50 } />
           </div>
           {/* Right Arrow */ }
-          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl p-2 text-white cursor-pointer'>
-            <BsChevronCompactRight onClick={ nextSlide } size={ 30 } />
+          <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] right-5 text-2xl cursor-pointer'>
+            <IoIosArrowForward onClick={ nextSlide } size={ 50 } />
           </div>
-          <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-2'>
+          <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-0.5'>
             { slides.map((slide, slideIndex) => (
               <div
                 key={ slideIndex }
                 onClick={ () => goToSlide(slideIndex) }
-                className='text-2xl cursor-pointer'
+                className='text-4xl cursor-pointer'
               >
                 <RxDotFilled />
               </div>
