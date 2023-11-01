@@ -7,13 +7,22 @@ import 'src/app/globals.css'
 const ProjectSection = () => {
   const slides = [
     {
-      url: '/assets/img/projects/1.png'
+      url: '/assets/img/projects/11.png',
+      description: 'Nuestro objetivo es inspirar y guiar a las personas hacia un estilo de vida activo y saludable, fomentando el bienestar físico y mental',
+      title: 'EcoFusión Fitness',
+      color: 'text-[#FF4500]'
     },
     {
-      url: '/assets/img/projects/2.png'
+      url: '/assets/img/projects/22.png',
+      description: 'Utilizamos tecnologías avanzadas de inteligencia artificial y análisis de datos para ofrecer pronósticos deportivos precisos y recomendaciones de apuestas en tiempo real, confiables y certeros',
+      title: 'AI',
+      color: 'text-[#FFBD5B]'
     },
     {
-      url: '/assets/img/projects/3.png'
+      url: '/assets/img/projects/33.png',
+      description: 'Este proyecto se basa en la gestión y administración de población de manera masiva, contando con muchas funcionalidades que la ayudan a ser la más completa',
+      title: 'Confidencial',
+      color: 'text-[Afb0b1]'
     }
   ]
 
@@ -40,7 +49,7 @@ const ProjectSection = () => {
       <div className='max-w-[1400px] h-[607px] w-full m-auto relative group z-20'>
         <div
           style={ { backgroundImage: `url(${slides[currentIndex].url})` } }
-          className='w-full h-full opacity-20 brightness-[.8] bg-center bg-no-repeat ease-in-out duration-300 relative'
+          className='w-full h-full bg-center bg-no-repeat ease-in-out duration-300 relative'
         >
           {/* Left Arrow */ }
           <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl text-primary-300 cursor-pointer'>
@@ -51,31 +60,34 @@ const ProjectSection = () => {
             <IoIosArrowForward onClick={ nextSlide } size={ 50 } />
           </div>
           <div className='absolute bottom-5 left-1/2 transform -translate-x-1/2 flex space-x-0.5'>
-            { slides.map((slide, slideIndex) => (
+            { slides.map((project, projectIndex) => (
               <div
-                key={ slideIndex }
-                onClick={ () => goToSlide(slideIndex) }
-                className={ `text-3xl cursor-pointer ${currentIndex === slideIndex ? 'text-[#808080]' : 'text-[#333333]'
-                  }` }
+                key={ projectIndex }
+                onClick={ () => goToSlide(projectIndex) }
+                className={ `text-4xl cursor-pointer ${currentIndex === projectIndex ? 'text-[#808080]' : 'text-[#333333]'}` }
               >
                 <RxDotFilled />
               </div>
             )) }
           </div>
-        </div>
-        <div className="absolute top-[5%] left-1/2 transform -translate-x-1/2 text-white text-center z-30 font-montserrat">
-          <h1 className="text-4xl">Proyectos</h1>
-          <p className="text-lg mt-48 max-w-sm mx-auto">
-            &quot;Sobre que es el proyecto, y cuales son sus valores o cosas que lo identifiquen&quot;
-          </p>
-          <h2 className="text-lg mt-10">Nombre del Proyecto</h2>
-          <p className="text-lg">Descripción detallada del proyecto.</p>
-          <a className="text-primary-300 underline hover:text-primary-500 cursor-pointer">
-            Ver más
-          </a>
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center z-30 font-montserrat">
+            <h1 className="text-4xl my-5 mb-40">Proyectos</h1>
+            <h2 className={ `text-lg ${slides[currentIndex].color}` }>
+              { slides[currentIndex].title }
+              {
+                currentIndex === 1 ? <span className='text-lg text-[#CECECE]'> PLAY</span> : ''
+              }
+            </h2>
+            <p className="text-lg mt-5 mb-5 max-w-sm mx-auto text-justify">
+              &quot;{ slides[currentIndex].description }&quot;.
+            </p>
+            <a className="text-primary-300 underline hover:text-primary-500 cursor-pointer">
+              Ver más
+            </a>
+          </div>
         </div>
       </div>
-    </div >
+    </div>
   )
 }
 
