@@ -22,9 +22,18 @@
   }
 }
 
-/* body { */
-/* color: var(--primary-color); */
-/* background: var(--background-color); */
-/* } */
+/* Estilo para la barra de desplazamiento */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
-/* Otras reglas CSS que utilizan las variables */
+/* Estilo para el mango de la barra de desplazamiento */
+::-webkit-scrollbar-thumb {
+  background-color: #808080;
+}
+
+/* Estilo para la pista de la barra de desplazamiento */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  /* Cambia esto al color que desees */
+}
