@@ -4,7 +4,7 @@ import 'tailwindcss/tailwind.css'
 import Navbar from '@/components/common/Navbar'
 import Footer from '@/components/common/Footer'
 /* ******************************************************** */
-
+import CardSection from '@/components/sections/services/CardSection'
 /* ******************************************************** */
 
 const Main = () => {
@@ -12,7 +12,7 @@ const Main = () => {
     <div>
       <Navbar />
 
-      {/* <CardSection /> */ }
+      <CardSection />
 
       <Footer />
     </div>
