@@ -22,8 +22,8 @@ const Footer = () => {
               <FaInstagram size={ 24 } className="text-white hover:text-gray-300" />
             </a>
           </div>
-          <div className="text-center md:text-right">
-            <p className="text-sm"> Jeremi Perez © 2023   | Todos los derechos reservados.</p>
+          <div className="text-center font-montserrat md:text-right">
+            <p className="text-xs"> Jeremi Perez © 2023   | Todos los derechos reservados.</p>
           </div>
         </div>
       </div>

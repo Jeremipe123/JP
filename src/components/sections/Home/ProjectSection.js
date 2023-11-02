@@ -45,8 +45,8 @@ const ProjectSection = () => {
   }
 
   return (
-    <div className="bg-primary-800 w-full h-full relative">
-      <div className='max-w-[1400px] h-[607px] w-full m-auto relative group z-20'>
+    <div className="bg-primary-100 w-full h-full relative">
+      <div className='max-w-[1400px] h-[599px] w-full m-auto relative group z-20'>
         <div
           style={ { backgroundImage: `url(${slides[currentIndex].url})` } }
           className='w-full h-full bg-center bg-no-repeat ease-in-out duration-300 relative'
@@ -81,9 +81,9 @@ const ProjectSection = () => {
             <p className="text-lg mt-5 mb-5 max-w-sm mx-auto text-justify">
               &quot;{ slides[currentIndex].description }&quot;.
             </p>
-            <a className="text-primary-300 underline hover:text-primary-500 cursor-pointer">
+            {/* <a className="text-primary-300 underline hover:text-primary-500 cursor-pointer">
               Ver más
-            </a>
+            </a> */}
           </div>
         </div>
       </div>

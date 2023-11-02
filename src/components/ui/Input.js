@@ -2,7 +2,7 @@ import React from 'react'
 
 const Input = ({ label, placeholder }) => {
   return (
-    <div className="w-full md:w-1/6 mb-4 md:mb-0 md:mr-4">
+    <div className="w-full md:w-auto mb-4 md:mb-0 md:mr-4">
       <label className="block uppercase tracking-wide text-primary-900 text-xs mb-2">
         { label }
       </label>
