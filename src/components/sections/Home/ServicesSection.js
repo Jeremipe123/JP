@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import Button from '../../ui/Button2'
 
 const ServicesSection = () => {
@@ -10,9 +11,11 @@ const ServicesSection = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut cursus erat.
           Proin ac posuere purus. Nam sed arcu erat. Praesent a vehicula est, et condimentum enim.
         </p>
-        <div className="flex justify-center">
-          <Button label="Ver más" textColor="text-black" color="bg-primary-300" hover="bg-red-500" />
-        </div>
+        <Link href="/services">
+          <div className="flex justify-center">
+            <Button label="Ver más" />
+          </div>
+        </Link>
       </div>
     </div>
   )
