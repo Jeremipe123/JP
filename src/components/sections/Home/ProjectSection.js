@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { RxDotFilled } from 'react-icons/rx'
-import 'src/app/globals.css'
 // import Home from '@/components/ui/Carrousel'
 
 const ProjectSection = () => {
@@ -70,7 +69,7 @@ const ProjectSection = () => {
               </div>
             )) }
           </div>
-          <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center z-30 font-montserrat">
+          <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center z-30">
             <h1 className="text-4xl my-5 mb-40">Proyectos</h1>
             <h2 className={ `text-lg ${slides[currentIndex].color}` }>
               { slides[currentIndex].title }

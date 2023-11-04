@@ -1,39 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Button from '@/components/ui/Button'
 
-const CardSection = () => {
-  const pricingPlans = [
-    {
-      title: 'Asesoría',
-      description: '1 hora\n$100',
-      buttonText: 'Reservar por ahora'
-    }
-    // {
-    //   title: 'Consultoría',
-    //   description: '1 hora\n$100',
-    //   buttonText: 'Reservar por ahora'
-    // }
-  ]
+const CardSection = [
+  {
+    title: 'Asesoría | Consultoría',
+    description: '1 hora',
+    description2: '100$',
+    buttonText: 'Reservar'
+  },
+  {
+    title: 'Plan Personalizado',
+    description: 'Descripción del Plan Personalizado.',
+    buttonText: 'Seleccionar Personalizado'
+  }
+]
+
+const PricingSection = () => {
+  const [isBasicGuide, setIsBasicGuide] = useState(true)
+  const selectedCard = isBasicGuide ? CardSection[0] : CardSection[1]
 
   return (
-    <section className="bg-primary-500 py-8 text-white text-center">
-      <div className="relative mb-8">
-        <div className="absolute left-1/2 transform -translate-x-1/2 bg-white h-1 w-1/3"></div>
+    <section className="bg-primary-500 py-12 text-white text-center relative">
+      <div className={ `absolute left-1/3 w-1/3 ${isBasicGuide ? 'bg-black' : 'bg-white'} h-0.5 top-32 transition-all duration-300` }></div>
+      <div className={ `absolute right-1/3 w-1/6 ${isBasicGuide ? 'bg-white' : 'bg-black'} h-0.5 top-32 transition-all duration-300` }></div>
+      <div className='flex flex-row justify-center mb-16'>
+        <p onClick={ () => setIsBasicGuide(true) } className={ `mt-24 text-lg text-white cursor-pointer mx-16 ${!isBasicGuide ? 'text-gray-300' : ''}` }>
+          Guía básica
+        </p>
+        <p onClick={ () => setIsBasicGuide(false) } className={ `mt-24 text-lg text-white cursor-pointer mx-6 ${!isBasicGuide ? '' : 'text-gray-300'}` }>
+          Guía personalizada
+        </p>
       </div>
-      <p className="text-xl font-semibold mb-4">Guía básica</p>
-      <p className="text-xl font-semibold mb-8">Guía personalizada</p>
-      <div className="mx-auto max-w-md bg-white p-6 rounded-lg shadow-lg">
-        { pricingPlans.map((plan, index) => (
-          <div key={ index } className="mb-8 text-black">
-            <h3 className="text-2xl font-semibold mb-4">{ plan.title }</h3>
-            <p className="text-gray-500 mb-2">{ plan.description }</p>
-            <button className="bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:ring-primary-200 font-medium rounded-lg text-sm px-5 py-2.5">
-              { plan.buttonText }
-            </button>
-          </div>
-        )) }
+      <div className="mx-auto max-w-[240px] mb-5 bg-white py-7 shadow-lg text-black text-center flex flex-col items-center"> {/* Aplica text-center y mx-auto aquí */ }
+        <p className="font-semibold mb-5">{ selectedCard.title }</p>
+        <p className="mb-2">{ selectedCard.description }</p>
+        <p>{ selectedCard.description2 }</p>
+        <Button label={ selectedCard.buttonText } />
       </div>
     </section>
   )
 }
 
-export default CardSection
+export default PricingSection

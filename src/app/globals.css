@@ -5,6 +5,10 @@
   /* ... otros colores ... */
 }
 
+body {
+  font-family: Montserrat;
+}
+
 /*   CSS para la animación   */
 .animate-fade-in {
   animation: fade-in 1s ease-out;

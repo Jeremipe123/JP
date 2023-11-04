@@ -5,7 +5,7 @@ const AboutMe = () => {
     <div className="bg-white py-10">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
-          <div className="md:px-2 font-montserrat text-justify">
+          <div className="md:px-2 text-justify">
             <h2 className="text-3xl mb-4">¿Quién soy?</h2>
             <p className="mb-6">
               Lorem Ipsum is simply dummy text of the printing and typesetting industry.
