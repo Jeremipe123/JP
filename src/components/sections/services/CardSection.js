@@ -1,41 +1,70 @@
 import React, { useState } from 'react'
 import Button from '@/components/ui/Button'
 
-const CardSection = [
+const GuideData = [
   {
-    title: 'Asesoría | Consultoría',
-    description: '1 hora',
-    description2: '100$',
-    buttonText: 'Reservar'
+    title: 'Guía Básica',
+    cards: [
+      {
+        title: 'Asesoría | Consultoría',
+        description: '1 hora',
+        description2: '100$',
+        buttonText: 'Reservar'
+      },
+      {
+        title: 'Creación de página web',
+        description: 'Nos adaptamos a su necesidad, con nuestra originalidad',
+        buttonText: 'Solicitar'
+      }
+    ]
   },
   {
-    title: 'Plan Personalizado',
-    description: 'Descripción del Plan Personalizado.',
-    buttonText: 'Seleccionar Personalizado'
+    title: 'Guía Personalizada',
+    cards: [
+      {
+        title: 'Corrección | Modificaciones',
+        description: 'Te ayudamos a mejorar tu página al máximo',
+        buttonText: 'Solicitar'
+      }
+      // {
+      //   title: 'Tarjeta 2',
+      //   description: 'Descripción de la Tarjeta 2.',
+      //   buttonText: 'Ver Más'
+      // }
+    ]
   }
 ]
 
 const PricingSection = () => {
-  const [isBasicGuide, setIsBasicGuide] = useState(true)
-  const selectedCard = isBasicGuide ? CardSection[0] : CardSection[1]
+  const [selectedGuideIndex, setSelectedGuideIndex] = useState(0)
+  const selectedGuide = GuideData[selectedGuideIndex]
 
   return (
     <section className="bg-primary-500 py-12 text-white text-center relative">
-      <div className={ `absolute left-1/3 w-1/3 ${isBasicGuide ? 'bg-black' : 'bg-white'} h-0.5 top-32 transition-all duration-300` }></div>
-      <div className={ `absolute right-1/3 w-1/6 ${isBasicGuide ? 'bg-white' : 'bg-black'} h-0.5 top-32 transition-all duration-300` }></div>
-      <div className='flex flex-row justify-center mb-16'>
-        <p onClick={ () => setIsBasicGuide(true) } className={ `mt-24 text-lg text-white cursor-pointer mx-16 ${!isBasicGuide ? 'text-gray-300' : ''}` }>
-          Guía básica
-        </p>
-        <p onClick={ () => setIsBasicGuide(false) } className={ `mt-24 text-lg text-white cursor-pointer mx-6 ${!isBasicGuide ? '' : 'text-gray-300'}` }>
-          Guía personalizada
-        </p>
+      <div className={ `absolute left-1/3 w-1/3 ${selectedGuideIndex === 0 ? 'bg-black' : 'bg-white'} h-0.5 top-32 transition-all duration-300` }></div>
+      <div className={ `absolute right-1/3 w-1/6 ${selectedGuideIndex === 0 ? 'bg-white' : 'bg-black'} h-0.5 top-32 transition-all duration-300` }></div>
+      <div className="flex flex-row justify-center mb-16">
+        { GuideData.map((guide, index) => (
+          <p
+            key={ index }
+            onClick={ () => setSelectedGuideIndex(index) }
+            className={ `mt-24 text-lg text-white cursor-pointer mx-6 ml-16 ${selectedGuideIndex === index ? '' : 'text-[#d8d8d8]'}` }
+          >
+            { guide.title }
+          </p>
+        )) }
       </div>
-      <div className="mx-auto max-w-[240px] mb-5 bg-white py-7 shadow-lg text-black text-center flex flex-col items-center"> {/* Aplica text-center y mx-auto aquí */ }
-        <p className="font-semibold mb-5">{ selectedCard.title }</p>
-        <p className="mb-2">{ selectedCard.description }</p>
-        <p>{ selectedCard.description2 }</p>
-        <Button label={ selectedCard.buttonText } />
+      <div className="flex flex-row justify-center">
+        { selectedGuide.cards.map((card, index) => (
+          <div key={ index } className="mx-4">
+            <div className="mx-auto max-w-[260px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
+              <p className="font-semibold mb-5">{ card.title }</p>
+              <p className="mb-2">{ card.description }</p>
+              { card.description2 && <p>{ card.description2 }</p> }
+              <Button label={ card.buttonText } />
+            </div>
+          </div>
+        )) }
       </div>
     </section>
   )
