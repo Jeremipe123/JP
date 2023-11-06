@@ -6,7 +6,7 @@ const Input = ({ label, placeholder }) => {
       <label className="block uppercase tracking-wide text-primary-900 text-xs mb-2">
         { label }
       </label>
-      <input className="appearance-none block w-full bg-[#D1D5DB] text-primary-700 py-3 px-4 leading-tight focus:outline-none focus:border-primary-500" id="grid-last-name" type="text" placeholder={ placeholder } />
+      <input className="appearance-none block w-full bg-[#D1D5DB] text-primary-700 py-3 px-4 leading-tight focus:outline-none focus:border-primary-500" id={ label } type="text" placeholder={ placeholder } />
     </div>
   )
 }
