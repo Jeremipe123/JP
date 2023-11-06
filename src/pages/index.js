@@ -18,9 +18,9 @@ const Main = () => {
 
       <MainSection />
       <AboutMe />
-      <ContactsSection />
       <ProjectSesion />
       <ServicesSection />
+      <ContactsSection />
 
       <Footer />
     </div>

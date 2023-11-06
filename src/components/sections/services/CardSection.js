@@ -6,7 +6,7 @@ const GuideData = [
     title: 'Guía Básica',
     cards: [
       {
-        title: 'Asesoría | Consultoría',
+        title: 'Consultoría',
         description: '1 hora',
         description2: '100$',
         buttonText: 'Reservar'
@@ -22,15 +22,16 @@ const GuideData = [
     title: 'Guía Personalizada',
     cards: [
       {
-        title: 'Corrección | Modificaciones',
+        title: 'Asesoría',
+        description: '1 hora',
+        description2: '300$',
+        buttonText: 'Reservar'
+      },
+      {
+        title: 'Modificaciones',
         description: 'Te ayudamos a mejorar tu página al máximo',
         buttonText: 'Solicitar'
       }
-      // {
-      //   title: 'Tarjeta 2',
-      //   description: 'Descripción de la Tarjeta 2.',
-      //   buttonText: 'Ver Más'
-      // }
     ]
   }
 ]
@@ -48,7 +49,7 @@ const PricingSection = () => {
           <p
             key={ index }
             onClick={ () => setSelectedGuideIndex(index) }
-            className={ `mt-24 text-lg text-white cursor-pointer mx-6 ml-16 ${selectedGuideIndex === index ? '' : 'text-[#d8d8d8]'}` }
+            className={ `mt-24 text-lg text-white cursor-pointer mx-6 ml-16 ${selectedGuideIndex === index ? '' : 'text-gray-300'}` }
           >
             { guide.title }
           </p>
@@ -57,7 +58,7 @@ const PricingSection = () => {
       <div className="flex flex-row justify-center">
         { selectedGuide.cards.map((card, index) => (
           <div key={ index } className="mx-4">
-            <div className="mx-auto max-w-[260px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
+            <div className="mx-auto w-[240px] h-[265px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
               <p className="font-semibold mb-5">{ card.title }</p>
               <p className="mb-2">{ card.description }</p>
               { card.description2 && <p>{ card.description2 }</p> }

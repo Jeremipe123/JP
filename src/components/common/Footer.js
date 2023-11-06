@@ -15,7 +15,8 @@ const Footer = () => {
             <a href="https://wa.me/+584241939329" className="mr-4">
               <FaWhatsapp size={ 24 } className="text-white hover:text-gray-300" />
             </a>
-            <a href="https://www.youtube.com/@JeremiPerez19" className="mr-4">
+            {/* <a href="https://www.youtube.com/@JeremiPerez19" className="mr-4"> */ }
+            <a className="mr-4">
               <FaYoutube size={ 24 } className="text-white hover:text-gray-300" />
             </a>
             <a href="https://www.instagram.com/jeremiperez19">
