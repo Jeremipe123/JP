@@ -4,13 +4,14 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "lint": "eslint ."
   },
   "dependencies": {
     "autoprefixer": "10.4.14",
     "eslint-config-next": "13.4.9",
+    "firebase": "^10.5.2",
     "next": "13.4.9",
     "postcss": "8.4.25",
     "react": "18.2.0",
