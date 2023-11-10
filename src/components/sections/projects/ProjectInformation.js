@@ -25,7 +25,7 @@ const ProjectData = [
   {
     title: 'Confidencial ',
     description: 'Por petición del cliente se ha ocultado algunos indicadores, los que se muestran son REALES "Este proyecto se basa en la gestión y administración de población de manera masiva, contando con muchas funcionalidades que la ayudan a ser la más completa."',
-    image: '/assets/img/projects/2.png',
+    image: '/assets/img/projects/3.png',
     color: 'text-[#7D3795]'
   }
 
