@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React, { useState } from 'react'
 import { IoIosArrowForward, IoIosArrowBack } from 'react-icons/io'
 import { RxDotFilled } from 'react-icons/rx'
@@ -71,15 +72,17 @@ const ProjectSection = () => {
           </div>
           <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center z-30">
             <h1 className="text-4xl my-5 mb-40">Proyectos</h1>
-            <h2 className={ `text-lg ${slides[currentIndex].color}` }>
-              { slides[currentIndex].title }
-              {
-                currentIndex === 1 ? <span className='text-lg text-[#CECECE]'> PLAY</span> : ''
-              }
-            </h2>
-            <p className="text-lg mt-5 mb-5 max-w-sm mx-auto text-justify">
-              &quot;{ slides[currentIndex].description }&quot;.
-            </p>
+            <Link href="/projects">
+              <h2 className={ `text-lg ${slides[currentIndex].color}` }>
+                { slides[currentIndex].title }
+                {
+                  currentIndex === 1 ? <span className='text-lg text-[#CECECE]'> PLAY</span> : ''
+                }
+              </h2>
+              <p className="text-lg mt-5 mb-5 max-w-sm mx-auto text-justify">
+                &quot;{ slides[currentIndex].description }&quot;.
+              </p>
+            </Link>
             {/* <a className="text-primary-300 underline hover:text-primary-500 cursor-pointer">
               Ver más
             </a> */}

@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { addUserToDatabase } from '@/backend/members'
 import Input from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
 
@@ -22,7 +21,7 @@ const ContactSection = () => {
     try {
       // Enviar datos del formulario al backend para registrar en la base de datos
       // Tu lógica para enviar datos al backend va aquí
-      await addUserToDatabase(formData)
+      // await addUserToDatabase(formData)
       // Limpiar el formulario después de enviar los datos
       setFormData({
         name: '',

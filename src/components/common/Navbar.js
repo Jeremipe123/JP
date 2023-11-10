@@ -5,7 +5,7 @@ import { useRouter } from 'next/router'
 const links = [
   { href: '/', label: 'Inicio' },
   { href: '/services', label: 'Servicios' },
-  { href: '/proyectos', label: 'Proyectos' }
+  { href: '/projects', label: 'Proyectos' }
 ]
 
 const Navbar = () => {

@@ -58,10 +58,12 @@ const PricingSection = () => {
       <div className="flex flex-row justify-center">
         { selectedGuide.cards.map((card, index) => (
           <div key={ index } className="mx-4">
-            <div className="mx-auto w-[240px] h-[265px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
-              <p className="font-semibold mb-5">{ card.title }</p>
-              <p className="mb-2">{ card.description }</p>
-              { card.description2 && <p>{ card.description2 }</p> }
+            <div className="mx-auto w-[240px] h-[235px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
+              <p className="font-semibold mb-6">{ card.title }</p>
+              <div className="h-[75px]">
+                <p className="mb-2">{ card.description }</p>
+                { card.description2 && <p>{ card.description2 }</p> }
+              </div>
               <Button label={ card.buttonText } />
             </div>
           </div>
