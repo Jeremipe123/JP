@@ -8,7 +8,7 @@ const GuideData = [
       {
         title: 'Consultoría',
         description: '1 hora',
-        description2: '100$',
+        description2: '50$',
         buttonText: 'Reservar'
       },
       {
@@ -24,7 +24,7 @@ const GuideData = [
       {
         title: 'Asesoría',
         description: '1 hora',
-        description2: '300$',
+        description2: '200$',
         buttonText: 'Reservar'
       },
       {

@@ -6,15 +6,26 @@ const AboutMe = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="md:px-2 text-justify">
-            <h2 className="text-3xl mb-4">¿Quién soy?</h2>
-            <p className="mb-6">
-              Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-              Lorem Ipsum has been the industry&apos;s standard dummy text ever since the 1500s,
-              when an unknown printer took a galley of type and scrambled it to make a type
-              specimen book. It has survived not only five centuries, but also the leap into
-              electronic typesetting, remaining essentially unchanged. It was popularised in the
-              1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-              recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+            <h2 className="text-3xl mb-6">¿Quién soy?</h2>
+            <p className="mb-2">
+              ¡Saludos! Soy Jeremi Pérez, <span className='font-bold'>no solo creamos código,
+                construimos experiencias. </span>
+              Desde mis inicios a los 20 años, me embarqué en un viaje
+              donde la autenticidad y el crecimiento personal son <span className='font-bold'>PRIORIDAD</span>.
+            </p>
+            <p className="mb-2">
+              &quot;En cada línea de código, buscamos la originalidad, la elegancia y la excelencia.&quot;
+            </p>
+            <p className='mb-2 font-bold'>
+              No somos solo desarrolladores; somos narradores de historias digitales.
+            </p>
+            <p className='mb-2'>
+              <span className='font-bold'>No se trata solo de mí</span>. Aquí, ofrecemos más que servicios: brindamos
+              atención personalizada y un compromiso firme con nuestra comunidad.
+            </p>
+            <p className='mb-2'>
+              Creo en el poder transformador de la tecnología, y JP es la plataforma
+              desde la cual creamos soluciones que van más allá de las expectativas.
             </p>
           </div>
           <div className="md:order-2">

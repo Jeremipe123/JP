@@ -6,10 +6,14 @@ const ServicesSection = () => {
   return (
     <div className="bg-primary-800 py-6">
       <div className="container mx-auto text-center text-white max-w-lg">
-        <h2 className="text-3xl mb-24">Servicios</h2>
-        <p className="text-lg mb-16 text-justify">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. In ut cursus erat.
-          Proin ac posuere purus. Nam sed arcu erat. Praesent a vehicula est, et condimentum enim.
+        <h2 className="text-3xl mb-20">Servicios</h2>
+        <p className="text-lg mb-8 text-justify">
+          En JP, transformamos ideas en experiencias digitales excepcionales.
+          Desde el diseño web hasta el desarrollo de software, ofrecemos soluciones
+          innovadoras y personalizadas.
+        </p>
+        <p className="text-lg mb-2 text-center font-semibold">
+          !Tu éxito es nuestro compromiso!
         </p>
         <Link href="/services">
           <div className="flex justify-center">
