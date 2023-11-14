@@ -41,7 +41,7 @@ const PricingSection = () => {
   const selectedGuide = GuideData[selectedGuideIndex]
 
   return (
-    <section className="bg-primary-500 py-12 text-white text-center relative">
+    <section className="bg-primary-500 h-screen py-12 text-white text-center relative">
       <div className={ `absolute left-1/3 w-1/3 ${selectedGuideIndex === 0 ? 'bg-black' : 'bg-white'} h-0.5 top-32 transition-all duration-300` }></div>
       <div className={ `absolute right-1/3 w-1/6 ${selectedGuideIndex === 0 ? 'bg-white' : 'bg-black'} h-0.5 top-32 transition-all duration-300` }></div>
       <div className="flex flex-row justify-center mb-16">
@@ -58,7 +58,7 @@ const PricingSection = () => {
       <div className="flex flex-row justify-center">
         { selectedGuide.cards.map((card, index) => (
           <div key={ index } className="mx-4">
-            <div className="mx-auto w-[240px] h-[235px] mb-5 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
+            <div className="mx-auto w-[240px] h-[235px] mb-12 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
               <p className="font-semibold mb-6">{ card.title }</p>
               <div className="h-[75px]">
                 <p className="mb-2">{ card.description }</p>

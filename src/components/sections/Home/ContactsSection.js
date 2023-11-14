@@ -37,8 +37,8 @@ const ContactSection = () => {
 
   return (
     <div className="bg-primary-500 py-8">
-      <div className="container mx-auto px-4 md:px-8">
-        <h2 className="text-2xl text-primary-900 mb-4">Forma parte de nuestra comunidad</h2>
+      <div className="container mx-auto px-8 text-justify">
+        <h2 className="text-3xl text-primary-900 mb-4">Forma parte de nuestra comunidad</h2>
         <p className="text-primary-900 mb-14 ">Únete a nosotros para participar en nuestra comunidad. ¡Te damos la bienvenida!</p>
         <form className="mx-auto flex flex-col md:flex-row md:items-center" onSubmit={ handleSubmit }>
           <Input label="Nombre" placeholder="Joe" name="name" value={ formData.name } onChange={ handleInputChange } />
