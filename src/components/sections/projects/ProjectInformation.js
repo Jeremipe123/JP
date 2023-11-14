@@ -34,30 +34,28 @@ const ProjectData = [
 const ProjectDescription = () => {
   return (
     <div className="bg-white py-10">
-      <div className="container">
-        {
-          ProjectData.map((project, projectIndex) => (
-            <>
-              <div key={ projectIndex } className="grid grid-cols-1 md:grid-cols-2 gap-2 items-center">
-                <div className="md:px-24 text-justify">
-                  <h2 className={ `text-center text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
-                    { ProjectData[projectIndex].title }
-                    <span className={ `text-center text-5xl ${ProjectData[projectIndex].color2}` }>
-                      { ProjectData[projectIndex].title2 }
-                    </span>
-                  </h2>
-                  <p className="text-xl">
-                    { ProjectData[projectIndex].description }
-                  </p>
-                </div>
-                <div className="md:order-2">
-                  <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
-                </div>
+      {
+        ProjectData.map((project, projectIndex) => (
+          <>
+            <div key={ projectIndex } className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
+              <div className="px-8 sm:px-12 lg:px-14 text-justify">
+                <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
+                  { ProjectData[projectIndex].title }
+                  <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
+                    { ProjectData[projectIndex].title2 }
+                  </span>
+                </h2>
+                <p className="text-xl">
+                  { ProjectData[projectIndex].description }
+                </p>
               </div>
-              <Divider />
-            </>
-          )) }
-      </div >
+              <div className="px-8 sm:px-12 lg:px-14">
+                <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
+              </div>
+            </div>
+            <Divider />
+          </>
+        )) }
     </div>
   )
 }

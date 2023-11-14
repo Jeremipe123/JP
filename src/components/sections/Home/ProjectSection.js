@@ -22,7 +22,7 @@ const ProjectSection = () => {
       url: '/assets/img/projects/33.png',
       description: 'Este proyecto se basa en la gestión y administración de población de manera masiva, contando con muchas funcionalidades que la ayudan a ser la más completa',
       title: 'Confidencial',
-      color: 'text-[Afb0b1]'
+      color: 'text-[#a637cc]'
     }
   ]
 
@@ -49,7 +49,7 @@ const ProjectSection = () => {
       <div className='max-w-[1400px] h-[599px] w-full m-auto relative group z-20'>
         <div
           style={ { backgroundImage: `url(${slides[currentIndex].url})` } }
-          className='w-full h-full bg-center bg-no-repeat ease-in-out duration-300 relative'
+          className='w-full h-full bg-no-repeat bg-center xs:bg-cover ease-in-out duration-300'
         >
           {/* Left Arrow */ }
           <div className='group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl text-primary-300 cursor-pointer'>
@@ -64,14 +64,14 @@ const ProjectSection = () => {
               <div
                 key={ projectIndex }
                 onClick={ () => goToSlide(projectIndex) }
-                className={ `text-4xl cursor-pointer ${currentIndex === projectIndex ? 'text-[#808080]' : 'text-[#333333]'}` }
+                className={ `text-3xl cursor-pointer ${currentIndex === projectIndex ? 'text-[#808080]' : 'text-[#333333]'}` }
               >
                 <RxDotFilled />
               </div>
             )) }
           </div>
           <div className="absolute left-1/2 transform -translate-x-1/2 text-white text-center z-30">
-            <h1 className="text-4xl my-5 mb-40">Proyectos</h1>
+            <h1 className="text-4xl my-5 mb-[50%] md:mb-40">Proyectos</h1>
             <Link href="/projects">
               <h2 className={ `text-lg ${slides[currentIndex].color}` }>
                 { slides[currentIndex].title }
@@ -79,7 +79,7 @@ const ProjectSection = () => {
                   currentIndex === 1 ? <span className='text-lg text-[#CECECE]'> PLAY</span> : ''
                 }
               </h2>
-              <p className="text-lg mt-5 mb-5 max-w-sm mx-auto text-justify">
+              <p className="text-lg mt-5 mb-5 max-w-xl mx-auto text-justify">
                 &quot;{ slides[currentIndex].description }&quot;.
               </p>
             </Link>
