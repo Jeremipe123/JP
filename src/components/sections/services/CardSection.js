@@ -3,7 +3,7 @@ import Button from '@/components/ui/Button'
 
 const GuideData = [
   {
-    title: 'Guía Básica',
+    title: 'Básico',
     cards: [
       {
         title: 'Consultoría',
@@ -19,7 +19,7 @@ const GuideData = [
     ]
   },
   {
-    title: 'Guía Personalizada',
+    title: 'Personalizado',
     cards: [
       {
         title: 'Asesoría',
@@ -41,24 +41,24 @@ const PricingSection = () => {
   const selectedGuide = GuideData[selectedGuideIndex]
 
   return (
-    <section className="bg-primary-500 h-screen py-12 text-white text-center relative">
-      <div className={ `absolute left-1/3 w-1/3 ${selectedGuideIndex === 0 ? 'bg-black' : 'bg-white'} h-0.5 top-32 transition-all duration-300` }></div>
-      <div className={ `absolute right-1/3 w-1/6 ${selectedGuideIndex === 0 ? 'bg-white' : 'bg-black'} h-0.5 top-32 transition-all duration-300` }></div>
+    <section className="bg-primary-500 h-[86vh] py-12 text-white text-center relative">
+      <div className={ `mx-[15%] w-[35%] md:mx-[30%] md:w-[20%] ${selectedGuideIndex === 0 ? 'bg-black' : 'bg-white'} h-0.5 transition-all duration-300` }></div>
+      <div className={ `mx-[50%] -mt-0.5 w-[35%] md:w-[20%] ${selectedGuideIndex === 0 ? 'bg-white' : 'bg-black'} h-0.5 transition-all duration-300` }></div>
       <div className="flex flex-row justify-center mb-16">
         { GuideData.map((guide, index) => (
           <p
             key={ index }
             onClick={ () => setSelectedGuideIndex(index) }
-            className={ `mt-24 text-lg text-white cursor-pointer mx-6 ml-16 ${selectedGuideIndex === index ? '' : 'text-gray-300'}` }
+            className={ `mt-8 text-lg text-white cursor-pointer ml-14 -mr-3 sm:ml-28 sm:mr-20 ${selectedGuideIndex === index ? '' : 'text-gray-300'}` }
           >
             { guide.title }
           </p>
         )) }
       </div>
-      <div className="flex flex-row justify-center">
+      <div className="flex flex-col sm:flex-row justify-center">
         { selectedGuide.cards.map((card, index) => (
           <div key={ index } className="mx-4">
-            <div className="mx-auto w-[240px] h-[235px] mb-12 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
+            <div className="mx-auto w-[240px] h-[235px] mb-10 bg-white px-4 py-6 shadow-lg text-black text-center flex flex-col items-center">
               <p className="font-semibold mb-6">{ card.title }</p>
               <div className="h-[75px]">
                 <p className="mb-2">{ card.description }</p>
