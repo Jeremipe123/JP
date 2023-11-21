@@ -41,7 +41,7 @@ const PricingSection = () => {
   const selectedGuide = GuideData[selectedGuideIndex]
 
   return (
-    <section className="bg-primary-500 h-[86vh] py-12 text-white text-center relative">
+    <section className="bg-primary-500 h-[116vh] md:h-[86vh] py-12 text-white text-center relative">
       <div className={ `mx-[15%] w-[35%] md:mx-[30%] md:w-[20%] ${selectedGuideIndex === 0 ? 'bg-black' : 'bg-white'} h-0.5 transition-all duration-300` }></div>
       <div className={ `mx-[50%] -mt-0.5 w-[35%] md:w-[20%] ${selectedGuideIndex === 0 ? 'bg-white' : 'bg-black'} h-0.5 transition-all duration-300` }></div>
       <div className="flex flex-row justify-center mb-16">

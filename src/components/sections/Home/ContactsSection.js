@@ -18,6 +18,7 @@ const ContactSection = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault()
+
     try {
       // Enviar datos del formulario al backend para registrar en la base de datos
       // Tu lógica para enviar datos al backend va aquí
