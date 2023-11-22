@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Input from '@/components/ui/Input'
 import Button from '@/components/ui/Button'
+import Alert from '@/components/ui/Alert' // Importa el componente de alerta
 
 const ContactSection = () => {
   const [formData, setFormData] = useState({
@@ -8,6 +9,8 @@ const ContactSection = () => {
     last_name: '',
     email: ''
   })
+
+  const [showAlert, setShowAlert] = useState(false)
 
   const handleInputChange = (e) => {
     setFormData({
@@ -20,17 +23,18 @@ const ContactSection = () => {
     e.preventDefault()
 
     try {
-      // Enviar datos del formulario al backend para registrar en la base de datos
-      // Tu lógica para enviar datos al backend va aquí
-      // await addUserToDatabase(formData)
+      // Simular el envío de datos al backend
+      // await new Promise((resolve) => setTimeout(resolve, 1000));
+
       // Limpiar el formulario después de enviar los datos
       setFormData({
         name: '',
         last_name: '',
         email: ''
       })
-      // Actualizar la lista de usuarios (opcional, dependiendo de tu lógica)
-      // updateUsersList()
+
+      // Mostrar la alerta después de 2 segundos
+      setShowAlert(true)
     } catch (error) {
       console.error('Error al enviar solicitud:', error)
     }
@@ -47,6 +51,8 @@ const ContactSection = () => {
           <Input label="Correo" placeholder="correo@example.com" name="email" value={ formData.email } onChange={ handleInputChange } />
           <Button label="Enviar solicitud" onSubmit={ handleSubmit } />
         </form>
+
+        { showAlert && <Alert message="¡Se ha enviado un correo satisfactoriamente!" onClose={ () => setShowAlert(false) } timeout={ 4000 } /> }
       </div>
     </div>
   )
