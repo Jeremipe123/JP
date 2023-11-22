@@ -17,9 +17,9 @@ const Main = () => {
     <div>
       <HeadPage />
 
-      {/* <MainSection /> */ }
-      {/* <AboutMe /> */ }
-      {/* <ProjectSesion /> */ }
+      <MainSection />
+      <AboutMe />
+      <ProjectSesion />
       <ServicesSection />
       <ContactsSection />
 

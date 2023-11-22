@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Input = ({ label, placeholder, name, value, onChange }) => {
+const Input = ({ label, placeholder, name, value, onChange, error, handleKeyPress }) => {
   return (
     <div className="w-full md:w-auto mb-4 md:mb-0 md:mr-4">
       <label className="block uppercase tracking-wide text-primary-900 text-xs mb-2">
@@ -14,7 +14,10 @@ const Input = ({ label, placeholder, name, value, onChange }) => {
         name={ name }
         value={ value }
         onChange={ onChange }
+        onKeyDown={ handleKeyPress }
+
       />
+      { error && <span className="text-white text-xs">{ error }</span> }
     </div>
   )
 }
