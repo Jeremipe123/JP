@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import Button from '@/components/ui/Button'
+import DynamicModal from '@/components/ui/Modal'
 
 const GuideData = [
   {
@@ -39,6 +40,15 @@ const GuideData = [
 const PricingSection = () => {
   const [selectedGuideIndex, setSelectedGuideIndex] = useState(0)
   const selectedGuide = GuideData[selectedGuideIndex]
+  const [isOpen, setOpen] = useState(false)
+
+  const closeModal = () => {
+    setOpen(false)
+  }
+
+  const openModal = () => {
+    setOpen(true)
+  }
 
   return (
     <section className="bg-primary-500 h-[116vh] md:h-[86vh] py-12 text-white text-center relative">
@@ -64,11 +74,12 @@ const PricingSection = () => {
                 <p className="mb-2">{ card.description }</p>
                 { card.description2 && <p>{ card.description2 }</p> }
               </div>
-              <Button label={ card.buttonText } />
+              <Button label={ card.buttonText } onSubmit={ openModal } />
             </div>
           </div>
         )) }
       </div>
+      { isOpen && <DynamicModal isOpen={ isOpen } handleClose={ closeModal } /> }
     </section>
   )
 }

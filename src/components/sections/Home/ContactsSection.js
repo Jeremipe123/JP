@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
 import emailjs from 'emailjs-com'
+import React, { useState } from 'react'
 import Input from '@/components/ui/Input'
 import Alert from '@/components/ui/Alert'
 import Button from '@/components/ui/Button'
@@ -108,9 +108,9 @@ const ContactSection = () => {
         <h2 className="text-3xl text-primary-900 mb-4">Forma parte de nuestra comunidad</h2>
         <p className="text-primary-900 mb-14 ">Únete a nosotros para participar en nuestra comunidad. ¡Te damos la bienvenida!</p>
         <form className="mx-auto flex flex-col md:flex-row md:items-center" onSubmit={ handleSubmit }>
-          <Input label="Nombre" placeholder="Joe" name="name" value={ formData.name } onChange={ handleInputChange } error={ errors.name } handleKeyPress={ handleKeyPressName } />
-          <Input label="Apellido" placeholder="Doe" name="last_name" value={ formData.last_name } onChange={ handleInputChange } error={ errors.last_name } handleKeyPress={ handleKeyPressName } />
-          <Input label="Correo" placeholder="correo@example.com" name="email" value={ formData.email } onChange={ handleInputChange } error={ errors.email } handleKeyPress={ isEmailValid } />
+          <Input label="Nombre" placeholder="Joe" name="name" value={ formData.name } maxLength={ 20 } onChange={ handleInputChange } error={ errors.name } handleKeyPress={ handleKeyPressName } />
+          <Input label="Apellido" placeholder="Doe" name="last_name" value={ formData.last_name } maxLength={ 20 } onChange={ handleInputChange } error={ errors.last_name } handleKeyPress={ handleKeyPressName } />
+          <Input label="Correo" placeholder="correo@example.com" name="email" value={ formData.email } maxLength={ 80 } onChange={ handleInputChange } error={ errors.email } handleKeyPress={ isEmailValid } />
           <Button label="Enviar solicitud" onSubmit={ handleSubmit } />
         </form>
 
