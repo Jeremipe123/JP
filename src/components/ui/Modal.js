@@ -2,10 +2,11 @@ import Input from './Input'
 import Button from './Button'
 import { useState } from 'react'
 import Textarea from './TextArea'
-// import emailjs from 'emailjs-com'
+import emailjs from 'emailjs-com'
 import { AiOutlineClose } from 'react-icons/ai'
+// import Alert from './Alert'
 
-const DynamicModal = ({ isOpen, handleClose, issue }) => {
+const DynamicModal = ({ isOpen, handleClose, issue, setShowAlert }) => {
   const [formData, setFormData] = useState({
     name: '',
     last_name: '',
@@ -102,16 +103,22 @@ const DynamicModal = ({ isOpen, handleClose, issue }) => {
       })
 
       // Enviar el correo utilizando Email.js
-      // const templateParams = {
-      //   name: formData.name,
-      //   last_name: formData.last_name,
-      //   to_email: formData.email
-      // }
+      const templateParams = {
+        subject: 'Solicitud para ' + issue,
+        content:
+          'Le escribo para informarle que deseo realizar una solicitud con la siguiente información: \n\n' +
+          formData.description +
+          '\n\nCualquier duda atender al siguiente correo: ' +
+          formData.email,
+        name: formData.name,
+        last_name: formData.last_name
+      }
 
-      // await emailjs.send('service_epj2zqh', 'template_botx107', templateParams, '13a5Yg0uCwD0Q4175')
+      await emailjs.send('service_epj2zqh', 'template_botx107', templateParams, '13a5Yg0uCwD0Q4175')
 
       // Mostrar la alerta después de 2 segundos
       handleClose()
+      setShowAlert(true)
     } catch (error) {
       console.error('Error al enviar solicitud:', error)
     }

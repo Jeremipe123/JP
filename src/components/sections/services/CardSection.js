@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Button from '@/components/ui/Button'
 import DynamicModal from '@/components/ui/Modal'
+import Alert from '@/components/ui/Alert'
 
 const GuideData = [
   {
@@ -40,13 +41,16 @@ const GuideData = [
 const PricingSection = () => {
   const [selectedGuideIndex, setSelectedGuideIndex] = useState(0)
   const selectedGuide = GuideData[selectedGuideIndex]
+  const [issueTheme, setIssueTheme] = useState(null)
+  const [showAlert, setShowAlert] = useState(false)
   const [isOpen, setOpen] = useState(false)
 
   const closeModal = () => {
     setOpen(false)
   }
 
-  const openModal = () => {
+  const openModal = (selectedIssueTheme) => {
+    setIssueTheme(selectedIssueTheme)
     setOpen(true)
   }
 
@@ -74,12 +78,15 @@ const PricingSection = () => {
                 <p className="mb-2">{ card.description }</p>
                 { card.description2 && <p>{ card.description2 }</p> }
               </div>
-              <Button label={ card.buttonText } onSubmit={ openModal } />
+              <Button label={ card.buttonText } onSubmit={ () => openModal(card.title) } />
             </div>
           </div>
         )) }
       </div>
-      { isOpen && <DynamicModal isOpen={ isOpen } handleClose={ closeModal } /> }
+      { isOpen && <DynamicModal isOpen={ isOpen } handleClose={ closeModal } issue={ issueTheme } setShowAlert={ setShowAlert } /> }
+      { showAlert && (
+        <Alert message="¡Se ha enviado un correo satisfactoriamente!" onClose={ () => setShowAlert(false) } timeout={ 4000 } />
+      ) }
     </section>
   )
 }

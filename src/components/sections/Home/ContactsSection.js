@@ -88,9 +88,10 @@ const ContactSection = () => {
 
       // Enviar el correo utilizando Email.js
       const templateParams = {
+        subject: 'Solicitud para unirse a la comunidad',
+        content: 'Quiero participar y formar parte de la comunidad JP mi email es: ' + formData.email,
         name: formData.name,
-        last_name: formData.last_name,
-        to_email: formData.email
+        last_name: formData.last_name
       }
 
       await emailjs.send('service_epj2zqh', 'template_botx107', templateParams, '13a5Yg0uCwD0Q4175')
