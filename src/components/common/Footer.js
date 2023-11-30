@@ -19,7 +19,8 @@ const Footer = () => {
             <a className="mr-4">
               <FaYoutube size={ 24 } className="text-white hover:text-gray-300" />
             </a>
-            <a href="https://www.instagram.com/jeremiperez19">
+            <a className="mr-4">
+              {/* <a href="https://www.instagram.com/jeremiperez19"> */ }
               <FaInstagram size={ 24 } className="text-white hover:text-gray-300" />
             </a>
           </div>
