@@ -138,7 +138,7 @@ const DynamicModal = ({ isOpen, handleClose, issue, setShowAlert }) => {
               <AiOutlineClose />
             </button>
             <h2 className="flex justify-center text-3xl -mt-10 mb-12">Solicitud</h2>
-            <form className="grid grid-cols-2 gap-4 text-black">
+            <form className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 gap-4 text-black">
               <Input label="Nombre" placeholder="Alex" name="name" value={ formData.name } maxLength={ 20 } onChange={ handleInputChange } error={ errors.name } handleKeyPress={ isNameValid } />
               <Input label="Apellido" placeholder="Gómez" name="last_name" value={ formData.last_name } maxLength={ 20 } onChange={ handleInputChange } error={ errors.last_name } handleKeyPress={ isNameValid } />
               <Input label="Correo" placeholder="correo@example.com" name="email" value={ formData.email } maxLength={ 80 } onChange={ handleInputChange } error={ errors.email } handleKeyPress={ isEmailValid } />
