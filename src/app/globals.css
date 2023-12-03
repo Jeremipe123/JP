@@ -11,7 +11,7 @@ body {
 
 /*   CSS para la animación   */
 .animate-fade-in {
-  animation: fade-in 1s ease-out;
+  animation: fade-in 1s ease-in;
 }
 
 @keyframes fade-in {
@@ -23,6 +23,23 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/*   CSS para la animación   */
+.animate-fade-out {
+  animation: fade-out 1s ease-out;
+}
+
+@keyframes fade-out {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  to {
+    opacity: 0;
+    transform: translateY(20px);
   }
 }
 
