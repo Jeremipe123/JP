@@ -38,20 +38,43 @@ const ProjectDescription = () => {
         ProjectData.map((project, projectIndex) => (
           <>
             <div key={ projectIndex } className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-              <div className="px-8 sm:px-12 lg:px-14 text-justify">
-                <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
-                  { ProjectData[projectIndex].title }
-                  <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
-                    { ProjectData[projectIndex].title2 }
-                  </span>
-                </h2>
-                <p className="text-xl">
-                  { ProjectData[projectIndex].description }
-                </p>
-              </div>
-              <div className="px-8 sm:px-12 lg:px-14">
-                <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
-              </div>
+              {
+                (projectIndex % 2) === 0
+                  ? (
+                    <>
+                      <div className="px-8 sm:px-12 lg:px-14">
+                        <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
+                      </div>
+                      <div className="px-8 sm:px-12 lg:px-14 text-justify">
+                        <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
+                          { ProjectData[projectIndex].title }
+                          <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
+                            { ProjectData[projectIndex].title2 }
+                          </span>
+                        </h2>
+                        <p className="text-xl">
+                          { ProjectData[projectIndex].description }
+                        </p>
+                      </div>
+                    </>)
+                  : (
+                    <>
+                      <div className="px-8 sm:px-12 lg:px-14 text-justify">
+                        <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
+                          { ProjectData[projectIndex].title }
+                          <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
+                            { ProjectData[projectIndex].title2 }
+                          </span>
+                        </h2>
+                        <p className="text-xl">
+                          { ProjectData[projectIndex].description }
+                        </p>
+                      </div>
+                      <div className="px-8 sm:px-12 lg:px-14">
+                        <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
+                      </div>
+                    </>)
+              }
             </div>
             <Divider />
           </>
