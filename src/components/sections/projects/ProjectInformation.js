@@ -7,7 +7,7 @@ const ProjectData = [
     title: 'EcoFusion Fitness',
     description: '"EcoFusion Fitness se dedica a transformar vidas a través del fitness personalizado y clases en grupo motivadoras. Nuestro objetivo es inspirar y guiar a las personas hacia un estilo de vida activo y saludable, brindando programas de entrenamiento adaptados y clases divertidas que fomentan el bienestar físico y mental."',
     image: '/assets/img/projects/1.png',
-    link: '/projects/demo/EcoFusionProject',
+    link: '/projects/demo/EcoFusion',
     color: 'text-[#FF4500]'
   },
   {
