@@ -29,7 +29,7 @@ const AboutMe = () => {
             </p>
           </div>
           <div className="md:order-2 flex justify-center">
-            <img src="/assets/img/aboutme.jpg" alt="Foto" className="w-[90%] h-[90%]" />
+            <img src="/assets/img/aboutme.jpg" alt="Foto" className="w-[75%] h-[75%]" />
           </div>
         </div>
       </div>
