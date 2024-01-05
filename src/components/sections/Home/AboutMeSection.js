@@ -28,8 +28,8 @@ const AboutMe = () => {
               desde la cual creamos soluciones que van más allá de las expectativas.
             </p>
           </div>
-          <div className="md:order-2">
-            <img src="/assets/img/aboutme.png" alt="Foto" className="w-full" />
+          <div className="md:order-2 flex justify-center">
+            <img src="/assets/img/aboutme.jpg" alt="Foto" className="w-[90%] h-[90%]" />
           </div>
         </div>
       </div>

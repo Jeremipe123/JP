@@ -25,7 +25,7 @@ const Footer = () => {
             </a>
           </div>
           <div className="text-center md:text-right">
-            <p className="text-xs"> Jeremi Perez © 2023   | Todos los derechos reservados.</p>
+            <p className="text-xs"> Jeremi Perez © { new Date().getFullYear() } | Todos los derechos reservados.</p>
           </div>
         </div>
       </div>
