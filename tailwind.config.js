@@ -7,7 +7,8 @@ module.exports = {
   ],
   theme: {
     fontFamily: {
-      montserrat: ['Montserrat']
+      montserrat: ['Montserrat'],
+      eco: ['ui-sans-serif', 'Impact']
     },
     extend: {
       colors: {
