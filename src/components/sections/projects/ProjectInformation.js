@@ -14,7 +14,7 @@ const ProjectData = [
     title: 'Lens Perfect',
     description: '"Descubre la belleza en cada instante: Lens Perfect captura emociones y momentos en imágenes impresionantes. Explora nuestro mundo visual y sumérgete en un viaje fotográfico excepcional."',
     image: '/assets/img/projects/4.png',
-    link: '/demo/EcoFusion',
+    link: '/demo/LensPerfect',
     color: 'text-[#000000]'
   },
   {
@@ -76,9 +76,11 @@ const ProjectDescription = () => {
                         { ProjectData[projectIndex].description }
                       </p>
                     </div>
-                    <div className="px-8 sm:px-12 lg:px-14">
-                      <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
-                    </div>
+                    <Link href={ ProjectData[projectIndex].link }>
+                      <div className="px-8 sm:px-12 lg:px-14">
+                        <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
+                      </div>
+                    </Link>
                   </>)
             }
           </div>
