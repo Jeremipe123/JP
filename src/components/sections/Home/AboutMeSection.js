@@ -4,7 +4,7 @@ const AboutMe = () => {
   return (
     <div className="bg-white py-10">
       <div className="container mx-auto px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="md:px-2 text-justify">
             <h2 className="text-3xl mb-6">¿Quién soy?</h2>
             <p className="mb-2">
@@ -28,8 +28,8 @@ const AboutMe = () => {
               desde la cual creamos soluciones que van más allá de las expectativas.
             </p>
           </div>
-          <div className="md:order-2 flex justify-center">
-            <img src="/assets/img/aboutme.jpg" alt="Foto" className="w-[75%] h-[75%]" />
+          <div className="flex justify-center">
+            <img src="/assets/img/aboutme.jpg" alt="Foto" className="w-[75%] h-[75%] md:w-[65%] md:w-[65%]" />
           </div>
         </div>
       </div>

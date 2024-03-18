@@ -8,6 +8,7 @@ import AboutMe from '@/components/sections/Home/AboutMeSection'
 import ContactsSection from '@/components/sections/Home/ContactsSection'
 import ProjectSesion from '@/components/sections/Home/ProjectSection'
 import ServicesSection from '@/components/sections/Home/ServicesSection'
+import Navbar from '@/components/common/Navbar'
 // import Loader from '@/components/ui/Loader'
 
 const Main = () => {
@@ -15,6 +16,7 @@ const Main = () => {
     <div>
       <>
         <HeadPage />
+        <Navbar />
         <MainSection />
         <AboutMe />
         <ProjectSesion />
