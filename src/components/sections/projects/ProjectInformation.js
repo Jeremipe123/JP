@@ -39,54 +39,72 @@ const ProjectData = [
 const ProjectDescription = () => {
   return (
     <div className="bg-white py-10">
-      { ProjectData.map((project, projectIndex) => (
-        <React.Fragment key={ project.title }>
+      {ProjectData.map((project, projectIndex) => (
+        <React.Fragment key={project.title}>
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 items-center">
-            {
-              (projectIndex % 2) === 0
-                ? (
-                  <>
-                    <Link href={ ProjectData[projectIndex].link }>
-                      <div className="px-8 sm:px-12 lg:px-14">
-                        <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
-                      </div>
-                    </Link>
-                    <div className="px-8 sm:px-12 lg:px-14 text-justify">
-                      <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
-                        { ProjectData[projectIndex].title }
-                        <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
-                          { ProjectData[projectIndex].title2 }
+            {projectIndex % 2 === 0
+              ? (
+                <>
+                  <div className="order-1 lg:order-none px-8 sm:px-12 lg:px-14">
+                    <h2
+                      className={`text-center text-4xl md:text-5xl mb-10 ${project.color
+                        }`}
+                    >
+                      {project.title}
+                      {project.title2 && (
+                        <span
+                          className={`text-center text-4xl md:text-5xl ${project.color2
+                            }`}
+                        >
+                          {project.title2}
                         </span>
-                      </h2>
-                      <p className="text-xl">
-                        { ProjectData[projectIndex].description }
-                      </p>
+                      )}
+                    </h2>
+                    <p className="text-xl">{project.description}</p>
+                  </div>
+                  <Link href={project.link}>
+                    <div className="order-1 lg:order-none px-8 sm:px-12 lg:px-14">
+                      <img
+                        src={project.image}
+                        alt="Foto"
+                        className="w-full"
+                      />
                     </div>
-                  </>)
-                : (
-                  <>
-                    <div className="px-8 sm:px-12 lg:px-14 text-justify">
-                      <h2 className={ `text-center text-4xl md:text-5xl mb-10 ${ProjectData[projectIndex].color}` }>
-                        { ProjectData[projectIndex].title }
-                        <span className={ `text-center text-4xl md:text-5xl ${ProjectData[projectIndex].color2}` }>
-                          { ProjectData[projectIndex].title2 }
+                  </Link>
+                </>)
+              : (
+                <>
+                  <div className="order-1 lg:order-none px-8 sm:px-12 lg:px-14 text-justify">
+                    <h2
+                      className={`text-center text-4xl md:text-5xl mb-10 ${project.color
+                        }`}
+                    >
+                      {project.title}
+                      {project.title2 && (
+                        <span
+                          className={`text-center text-4xl md:text-5xl ${project.color2
+                            }`}
+                        >
+                          {project.title2}
                         </span>
-                      </h2>
-                      <p className="text-xl">
-                        { ProjectData[projectIndex].description }
-                      </p>
+                      )}
+                    </h2>
+                    <p className="text-xl">{project.description}</p>
+                  </div>
+                  <Link href={project.link}>
+                    <div className="order-1 lg:order-none px-8 sm:px-12 lg:px-14">
+                      <img
+                        src={project.image}
+                        alt="Foto"
+                        className="w-full"
+                      />
                     </div>
-                    <Link href={ ProjectData[projectIndex].link }>
-                      <div className="px-8 sm:px-12 lg:px-14">
-                        <img src={ ProjectData[projectIndex].image } alt="Foto" className="w-full" />
-                      </div>
-                    </Link>
-                  </>)
-            }
+                  </Link>
+                </>)}
           </div>
-          <Divider key={ `divider-${project.title}` } />
+          <Divider key={`divider-${project.title}`} />
         </React.Fragment>
-      )) }
+      ))}
     </div>
   )
 }

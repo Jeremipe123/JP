@@ -18,6 +18,9 @@ module.exports = {
           500: '#808080',
           800: '#333333',
           900: '#ffffff'
+        },
+        custom: {
+          100: 'rgba(255, 255, 255, 0.9)' // Aquí defines el color rgba
         }
       }
     }

@@ -7,8 +7,8 @@ const EcoFusionProject = () => {
         <div className="container mx-auto max-w-7xl">
           <header className="flex justify-center md:justify-between items-center bg-black bg-opacity-70 py-8 w-full z-50">
             <div className="hidden md:block text-4xl font-bold text-[#ff4500] ml-8">EcoFusion Fitness</div>
-            <nav className="mr-4">
-              <ul className="flex text-white">
+            <nav className="mr-4 text-center">
+              <ul className="flex flex-col md:flex-row text-white">
                 <li className="mx-4"><button className="transition duration-300 hover:text-orange-500">Inicio</button></li>
                 <li className="mx-4"><button className="transition duration-300 hover:text-orange-500">Servicios</button></li>
                 <li className="mx-4"><button className="transition duration-300 hover:text-orange-500">Testimonios</button></li>
