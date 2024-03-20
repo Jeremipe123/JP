@@ -3,7 +3,7 @@ import 'tailwindcss/tailwind.css'
 import '../../app/globals.css'
 /* ******************************************************** */
 import HeadPage from '@/components/common/Head'
-import EcoFusionProject from '@/components/sections/projects/demo/EcoFusionProject'
+import ConfidentialProject from '@/components/sections/projects/demo/ConfidentialProject'
 /* ******************************************************** */
 
 const EcoFusion = () => {
@@ -12,7 +12,7 @@ const EcoFusion = () => {
       <HeadPage />
       {/* <Navbar /> */}
 
-      <EcoFusionProject />
+      <ConfidentialProject />
       {/* <Footer /> */}
     </div>
   )

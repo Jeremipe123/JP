@@ -26,7 +26,7 @@ const LensPerfectProject = () => {
         </div>
         <div className={`absolute top-20 left-0 text-center right-0 ${!menuOpen && 'lg:bg-transparent'} lg:-mt-10 lg:relative lg:flex lg:items-center lg:justify-end lg:space-x-4 lg:top-auto lg:left-auto lg:right-auto bg-custom-100 ${menuOpen ? 'block' : 'hidden'}`}>
           {['Inicio', 'Portafolio', 'Sobre Mí', 'Blog', 'Álbumes de Clientes', 'Contacto'].map((item, index) => (
-            <a href={`#${item.toLowerCase().replace(' ', '-')}`} key={index} className="block px-4 py-2 text-black hover:bg-gray-200">{item}</a>
+            <button key={index} className="block px-4 py-2 text-black hover:bg-gray-200">{item}</button>
           ))}
         </div>
       </nav>
