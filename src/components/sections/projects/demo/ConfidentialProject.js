@@ -1,7 +1,7 @@
 import React from 'react'
-import MenuConfidentialProject from './ConfidentialProject/MenuConfidentialProject'
-import NavConfidentialProject from './ConfidentialProject/NavConfidentialProject'
-import ContentConfidentialProject from './ConfidentialProject/ContentConfidentialProject'
+import MenuConfidentialProject from './ConfidentialProject/Menu'
+import NavConfidentialProject from './ConfidentialProject/Nav'
+import ContentConfidentialProject from './ConfidentialProject/Content'
 
 const ConfidentialProject = () => {
   return (
