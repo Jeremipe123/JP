@@ -9,12 +9,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
-    "apexcharts": "^3.48.0",
     "autoprefixer": "10.4.14",
     "emailjs-com": "^3.2.0",
     "eslint-config-next": "13.4.9",
     "firebase": "^10.5.2",
-    "next": "13.4.9",
+    "next": "^13.5.6",
     "postcss": "8.4.25",
     "react": "18.2.0",
     "react-apexcharts": "^1.4.1",
@@ -23,6 +22,7 @@
     "tailwindcss": "^3.3.2"
   },
   "devDependencies": {
+    "apexcharts": "^3.48.0",
     "eslint": "^8.47.0",
     "eslint-config-standard": "^17.1.0",
     "eslint-plugin-import": "^2.28.0",

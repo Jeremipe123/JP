@@ -18,17 +18,20 @@ const ContentConfidentialProject = () => {
   ]
 
   return (
-    <div className='h-full w-11/12 rounded-xl bg-white mx-auto mt-8 overflow-auto p-6'>
+    <div className='h-full w-11/12 rounded-xl bg-white mx-auto mt-8 overflow-auto p-6 mb-8'>
       <div className="flex flex-row justify-center p-5">
         {cardsData.map(card => (
-          <div key={card.id} className="flex items-center justify-center mx-1.5 border border-gray-300 shadow-md w-36 h-[4.5rem] rounded-lg">
+          <div
+            key={card.id}
+            className="flex items-center justify-center mx-1.5 border border-gray-300 shadow-md w-36 h-[4.5rem] rounded-lg transition-transform transform hover:scale-110"
+          >
             {card.icon({ size: 26, color: 'purple' })}
             <div className="h-10 mx-3 border-l-2 border-gray-300"></div>
             <h2 className="text-sm font-semibold">{card.title}</h2>
           </div>
         ))}
       </div>
-      <div className="w-full h-px mx-auto bg-gray-300 mb-5" />
+      <div className="w-full h-px mx-auto bg-gray-300 mb-10" />
       <div className="flex flex-row">
         <div className="flex flex-col mr-8 w-2/6">
           <div className='flex items-center w-full h-8 bg-gray-200 rounded-md'>
