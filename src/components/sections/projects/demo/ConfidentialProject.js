@@ -7,7 +7,7 @@ const ConfidentialProject = () => {
   return (
     <div className="relative h-screen bg-gradient-to-t from-blue-400 to-purple-600 flex">
       <MenuConfidentialProject />
-      <div className="flex flex-col w-full">
+      <div className="flex flex-col w-screen">
         <NavConfidentialProject />
         <div className="overflow-auto flex-grow">
           <ContentConfidentialProject />
